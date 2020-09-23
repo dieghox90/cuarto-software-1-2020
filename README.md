@@ -1,6 +1,6 @@
 # Introduccion
 
-Este código corresponde a la asignatura de Programación de Aplicaciones Web, del periodo correspondiente a Mayo - Octubre de 2020, a los estudiantes del cuarto ciclo de la carrera de Desarrollo de Software del Instituto Superior Tecnológico Primero de Mayo. (Yantzaza - Zamora Chinchipe)
+Este código es una guía para mis estudiantes del cuarto ciclo de la carrera de `Tecnología Superior en Desarrollo de Software`, del `Instituto Superior Tecnologico Primero de Mayo`, en la asignatura de `Programacion de Aplicaciones Web`. Periodo en curso Mayo - Octubre 2020. `Yantzaza - Zamora Chinchipe - Ecuador`.
 
 # AppIntro
 
