@@ -1,0 +1,189 @@
+<h1 class="text-center my-3">PIPES</h1>
+
+
+<div class="card">
+
+    <div class="card-header bg-secondary text-white">
+        CONCEPTO
+    </div>
+
+    <div class="card-body">
+        Los pipes son funciones de Angular que nos permite <b>Transformar</b> visualmente
+        la informacion, por ejemplo, cambiar un texto a mayuscula o darle formato a una fecha
+
+    </div>
+
+</div>
+
+
+<table class="table table-striped my-3">
+
+    <thead class="bg-info text-white">
+
+        <tr>
+            <th>Dato inicial</th>
+            <th>Pipe Utilizado</th>
+            <th>Resultado</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>uppercase</td>
+            <td>{{ dato1 | uppercase }}</td>
+        </tr>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>lowercase</td>
+            <td>{{ dato1 | lowercase }}</td>
+        </tr>
+
+        <!-- Slice: Me permite cortar un texto y vector -->
+        <tr>
+            <td>{{dato1}}</td>
+            <td>slice:3</td>
+            <td>{{ dato1 | slice:3 }}</td>
+        </tr>
+
+        <tr>
+            <td>{{dato1}}</td>
+            <td>slice:0:3</td>
+            <td>{{ dato1 | slice:0:3 }}</td>
+        </tr>
+
+        <tr>
+            <td>{{vector}}</td>
+            <td>slice:2:5</td>
+            <td>{{ vector | slice:2:5 }}</td>
+        </tr>
+
+        <!-- number -->
+        <tr>
+            <td>{{PI}}</td>
+            <td>number</td>
+            <td>{{ PI | number }}</td>
+        </tr>
+
+        <!-- number -->
+        <tr>
+            <td>{{PI}}</td>
+            <td>number:'1.0-0'</td>
+            <td>{{ PI | number:'1.0-0' }}</td>
+        </tr>
+
+        <!-- number -->
+        <tr>
+            <td>{{PI}}</td>
+            <td>number:'.0-2'</td>
+            <td>{{ PI | number:'.0-2' }}</td>
+        </tr>
+
+
+        <!-- percent -->
+        <tr>
+            <td>{{porcentaje}}</td>
+            <td>percent</td>
+            <td>{{ porcentaje | percent }}</td>
+        </tr>
+
+
+        <!-- percent -->
+        <tr>
+            <td>{{porcentaje}}</td>
+            <td>percent:'2.2-2'</td>
+            <td>{{ porcentaje | percent:'2.2-2' }}</td>
+        </tr>
+
+
+        <!-- currency -->
+        <tr>
+            <td>{{salario}}</td>
+            <td>currency</td>
+            <td>{{ salario | currency }}</td>
+        </tr>
+
+        <!-- currency  ISO 4217-->
+        <tr>
+            <td>{{salario}}</td>
+            <td>currency</td>
+            <td>{{ salario | currency:'EUR' }}</td>
+        </tr>
+
+
+        <!-- JSON -->
+        <tr>
+            <td>{{persona}}</td>
+            <td>json</td>
+            <td>
+                <pre>
+                    {{ persona | json }}
+                </pre>
+            </td>
+        </tr>
+
+
+
+        <!-- ASYNC -->
+        <tr>
+            <td>{{valorPromesa}}</td>
+            <td>async</td>
+            <td>
+                <pre>
+                    {{ valorPromesa | async }}
+                </pre>
+            </td>
+        </tr>
+
+        <!-- DATE -->
+        <tr>
+            <td>{{fecha}}</td>
+            <td>date</td>
+            <td>
+                {{ fecha | date }}
+            </td>
+        </tr>
+
+        <!-- DATE -->
+        <tr>
+            <td>{{fecha}}</td>
+            <td>date:'medium'</td>
+            <td>
+                {{ fecha | date:'medium' }}
+            </td>
+        </tr>
+
+        <!-- DATE -->
+        <tr>
+            <td>{{fecha}}</td>
+            <td>date:'short'</td>
+            <td>
+                {{ fecha | date:'short' }}
+            </td>
+        </tr>
+
+        <!-- DATE -->
+        <tr>
+            <td>{{fecha}}</td>
+            <td>date:'short'</td>
+            <td>
+                {{ fecha | date:'dd - MMM - yyyy HH:mm' }}
+            </td>
+        </tr>
+
+        <!-- PIPE PERSONALIZADO -->
+        <tr>
+            <td>{{pipePersonalizado}}</td>
+            <td>Pipe Personalizado</td>
+            <td>
+                {{ pipePersonalizado | vocales}}
+            </td>
+        </tr>
+
+
+    </tbody>
+
+</table>

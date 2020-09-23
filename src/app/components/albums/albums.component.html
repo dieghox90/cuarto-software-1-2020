@@ -1,0 +1,19 @@
+<h1 class="text-center">Albums</h1>
+
+<div class="card-columns">
+    <div class="card" *ngFor="let item of nuevasCanciones">
+        <img class="card-img-top" [src]="item.images | imagenes" alt="Imagen no encontrada">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{item.name}}
+            </h5>
+
+            <span class="badge badge-secondary">Artistas:</span>
+
+            <span style="display: block;margin: 5px;" class="badge badge-info" *ngFor="let artista of item.artists">
+                {{artista.name}}
+            </span>
+
+        </div>
+    </div>
+</div>

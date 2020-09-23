@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\Mis Documentos\\Portafolio Diego Guaman - ITS Primero de Mayo\\Junio - Octubre 2020\\Programacion de Aplicaciones Web\\web"
+		},
+		{
+			"path": "..\\..\\..\\..\\PROYECTOS\\angular\\evaluacion"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "web"
+	}
+}
