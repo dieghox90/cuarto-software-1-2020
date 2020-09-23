@@ -1,3 +1,7 @@
+# Introduccion
+
+Este código corresponde a la asignatura de Programación de Aplicaciones Web, del periodo correspondiente a Mayo - Octubre de 2020, a los estudiantes del cuarto ciclo de la carrera de Desarrollo de Software del Instituto Superior Tecnológico Primero de Mayo. (Yantzaza - Zamora Chinchipe)
+
 # AppIntro
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
