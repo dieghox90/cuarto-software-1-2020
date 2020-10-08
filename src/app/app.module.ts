@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImagenesPipe } from './pipesPersonalizados/imagenes.pipe';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { FormUsuarioComponent } from './components/usuarios/form-usuario/form-usuario.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,11 +28,14 @@ import { ArtistaComponent } from './components/artista/artista.component';
     ImagenesPipe,
     SearchComponent,
     ArtistaComponent,
+    UsuariosComponent,
+    FormUsuarioComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
