@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'artista/:id', component: ArtistaComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'nuevo-usuario', component: FormUsuarioComponent },
-  { path: 'nuevo-usuario', component: FormUsuarioComponent },
+  { path: 'editar-usuario/:id', component: FormUsuarioComponent },
   { path: '', pathMatch: 'full', redirectTo: 'introduccion' },
 ];
 

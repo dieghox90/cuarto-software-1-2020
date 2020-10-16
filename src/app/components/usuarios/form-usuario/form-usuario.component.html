@@ -1,39 +1,84 @@
-<h1>{{titulo}}</h1>
+<h1 class="text-center my-4">{{titulo}}</h1>
 
 <form>
 
-    <div class="card">
-        <div class="card-header bg-info text-white">
-            Datos del usuario
+    <div class="row">
+
+        <div class="col-sm-8">
+
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    Datos del usuario
+                </div>
+        
+                <div class="card-body">
+        
+                    <div class="form-group">
+                        <label for="nombres">Nombres:</label>
+                        <input [(ngModel)]="usuario.nombres" type="text" class="form-control" id="nombres" name="nombres">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input [(ngModel)]="usuario.apellidos" type="text" class="form-control" id="apellidos" name="apellidos">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="cedula">Cedula:</label>
+                        <input [(ngModel)]="usuario.cedula" type="text" class="form-control" id="cedula" name="cedula">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input [(ngModel)]="usuario.correo" type="text" class="form-control" id="correo" name="correo">
+                    </div>
+        
+                    
+                </div>
+        
+            </div>
         </div>
 
-        <div class="card-body">
 
-            <div class="form-group">
-                <label for="nombres">Nombres:</label>
-                <input [(ngModel)]="usuario.nombres" type="text" class="form-control" id="nombres" name="nombres">
+        <div class="col-sm-4">
+
+            <div class="card">
+
+                <div class="card-header bg-secondary text-white">
+                    Datos de Direccion
+                </div>
+
+                <div class="card-body"> 
+
+                    <div class="form-group">
+                        <label for="calle_principal">Calle Principal:</label>
+                        <input [(ngModel)]="usuario.direccion.calle_principal" type="text" class="form-control" id="calle_principal" name="calle_principal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calle_secundaria">Calle Secundaria:</label>
+                        <input [(ngModel)]="usuario.direccion.calle_secundaria" type="text" class="form-control" id="calle_secundaria" name="calle_secundaria">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referencia">Referencia:</label>
+                        <input [(ngModel)]="usuario.direccion.referencia" type="text" class="form-control" id="referencia" name="referencia">
+                    </div>
+
+                </div>
+
             </div>
-
-            <div class="form-group">
-                <label for="apellidos">Apellidos:</label>
-                <input [(ngModel)]="usuario.apellidos" type="text" class="form-control" id="apellidos" name="apellidos">
-            </div>
-
-            <div class="form-group">
-                <label for="cedula">Cedula:</label>
-                <input [(ngModel)]="usuario.cedula" type="text" class="form-control" id="cedula" name="cedula">
-            </div>
-
-            <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input [(ngModel)]="usuario.correo" type="text" class="form-control" id="correo" name="correo">
-            </div>
-
-            <button (click)="guardar()" class="btn btn-primary"> <i class="fas fa-download"></i> Guardar </button>
 
         </div>
+
+       
 
     </div>
 
+    
+    <button (click)="usuario.id==null ? guardar():editar()"
+                     class="btn btn-primary w-100"> 
+                     <i class="fas fa-download"></i> {{usuario.id==null ? 'Crear Usuario':'Editar Usuario'}}</button>
+        
 
 </form>

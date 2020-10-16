@@ -28,4 +28,8 @@ export class UsuarioService {
   public delete(id:number): Observable<any> { 
     return this.http.delete<any>(this.url + "usuario/"+id);
   }
+
+  public findById(id: number): Observable<Usuario> { 
+    return this.http.get<Usuario>(this.url+"usuario-busqueda/"+id)
+  }
 }
