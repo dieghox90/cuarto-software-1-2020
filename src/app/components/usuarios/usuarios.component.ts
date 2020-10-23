@@ -17,6 +17,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.service.listar().subscribe(usuariosResp => {
       this.usuarios = usuariosResp;
+      console.log(this.usuarios);
     });
   }
 
@@ -38,5 +39,8 @@ export class UsuariosComponent implements OnInit {
       }
     });
   }
+
+
+
 
 }

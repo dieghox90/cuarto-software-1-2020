@@ -1,6 +1,10 @@
 <h1>Usuarios</h1>
 
-<table class="table table-striped">
+<div *ngIf="usuarios?.length ==0" class="alert alert-primary">
+    No hay usuarios registrados
+</div>
+
+<table *ngIf="usuarios?.length > 0" class="table table-striped">
 
     <thead>
         <tr>
@@ -8,6 +12,7 @@
             <th>Apellidos</th>
             <th>Cedula</th>
             <th>Correo</th>
+            <th>Direccion</th>
             <th>Acciones</th>
         </tr>
 
@@ -21,6 +26,10 @@
             <td>{{usuario.apellidos}}</td>
             <td>{{usuario.cedula}}</td>
             <td>{{usuario.correo}}</td>
+            <td>{{usuario.direccion.calle_principal}}
+                / {{usuario.direccion.calle_secundaria}}
+                / {{usuario.direccion.referencia}}
+            </td>
             <td>
                 <button [routerLink]="['/editar-usuario',usuario.id]" class="btn btn-info btn-sm"> <i class="fas fa-edit"></i> Editar</button>
                 <button (click)="eliminar(usuario)" class="btn btn-danger btn-sm"> <i class="fas fa-times-circle"></i> Eliminar</button>

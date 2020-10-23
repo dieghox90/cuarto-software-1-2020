@@ -1,6 +1,6 @@
 <h1 class="text-center my-4">{{titulo}}</h1>
 
-<form>
+<form [formGroup]="forma" (ngSubmit)="usuario.id==null ? guardar():editar()">
 
     <div class="row">
 
@@ -15,22 +15,35 @@
         
                     <div class="form-group">
                         <label for="nombres">Nombres:</label>
-                        <input [(ngModel)]="usuario.nombres" type="text" class="form-control" id="nombres" name="nombres">
+                        <input [class.is-invalid]="nombresNoValido" formControlName="nombres"  type="text" class="form-control" id="nombres" name="nombres">
+
+                        <small *ngIf="nombresNoValido" class="text-danger">
+                            Nombres: Campo Obligatorio
+                        </small>
                     </div>
         
                     <div class="form-group">
                         <label for="apellidos">Apellidos:</label>
-                        <input [(ngModel)]="usuario.apellidos" type="text" class="form-control" id="apellidos" name="apellidos">
+                        <input formControlName="apellidos" [class.is-invalid]="apellidosNoValido"  type="text" class="form-control" id="apellidos" name="apellidos">
+                        <small *ngIf="apellidosNoValido" class="text-danger">
+                            Apellidos: Campo Obligatorio
+                        </small>
                     </div>
         
                     <div class="form-group">
                         <label for="cedula">Cedula:</label>
-                        <input [(ngModel)]="usuario.cedula" type="text" class="form-control" id="cedula" name="cedula">
+                        <input  formControlName="cedula" [class.is-invalid]="cedulaNoValido"  type="text" class="form-control" id="cedula" name="cedula">
+                        <small *ngIf="cedulaNoValido" class="text-danger">
+                            Cedula: Campo Obligatorio y debe tener 10 caracteres
+                        </small>
                     </div>
         
                     <div class="form-group">
                         <label for="correo">Correo:</label>
-                        <input [(ngModel)]="usuario.correo" type="text" class="form-control" id="correo" name="correo">
+                        <input  formControlName="email" [class.is-invalid]="emailNoValido" type="text" class="form-control" id="correo" name="correo">
+                        <small *ngIf="emailNoValido" class="text-danger">
+                            Email: Campo Obligatorio y debe ser un correo valido
+                        </small>
                     </div>
         
                     
@@ -52,17 +65,17 @@
 
                     <div class="form-group">
                         <label for="calle_principal">Calle Principal:</label>
-                        <input [(ngModel)]="usuario.direccion.calle_principal" type="text" class="form-control" id="calle_principal" name="calle_principal">
+                        <input  type="text" class="form-control" id="calle_principal" name="calle_principal">
                     </div>
 
                     <div class="form-group">
                         <label for="calle_secundaria">Calle Secundaria:</label>
-                        <input [(ngModel)]="usuario.direccion.calle_secundaria" type="text" class="form-control" id="calle_secundaria" name="calle_secundaria">
+                        <input  type="text" class="form-control" id="calle_secundaria" name="calle_secundaria">
                     </div>
 
                     <div class="form-group">
                         <label for="referencia">Referencia:</label>
-                        <input [(ngModel)]="usuario.direccion.referencia" type="text" class="form-control" id="referencia" name="referencia">
+                        <input  type="text" class="form-control" id="referencia" name="referencia">
                     </div>
 
                 </div>
@@ -76,7 +89,7 @@
     </div>
 
     
-    <button (click)="usuario.id==null ? guardar():editar()"
+    <button type="submit"
                      class="btn btn-primary w-100"> 
                      <i class="fas fa-download"></i> {{usuario.id==null ? 'Crear Usuario':'Editar Usuario'}}</button>
         
